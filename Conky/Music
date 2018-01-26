@@ -1,0 +1,54 @@
+######################################
+#						   Font 								 #
+######################################
+use_xft yes
+override_utf8_locale yes
+text_buffer_size 2048
+xftalpha 1
+######################################
+#						  Window							   #
+######################################
+own_window yes
+own_window_class Conky
+own_window_type normal
+own_window_transparent yes
+#own_window_argb_value 100
+own_window_argb_visual yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes #PUEDE NO FUNCIONAR POR ESTO#
+#draw_borders yes
+draw_shades no
+no_buffers yes
+#uppercase no
+######################################
+#						  Position						   #
+######################################
+alignment tl
+gap_x 1040
+gap_y 370
+minimum_size 100 100
+maximum_width 600 #stop resizing
+
+######################################
+#						  Color						   		 #
+######################################
+#default_color BDB5A1
+default_color CFCFCF
+color0 eaeaea
+
+#######################################
+#       Very important!               #
+#######################################
+imlib_cache_size 0  #This will keep conky reloading the image
+update_interval 1.0
+
+#http://www.color-hex.com/
+
+TEXT
+${if_running audacious}
+
+${font Geosanslight:size=18}${color0}${goto 0}${voffset 0}${exec audtool --current-song-tuple-data title}${color}
+${color0}${goto 18}${voffset -5}${exec audtool --current-song-tuple-data artist}
+${color0}${goto 18}${voffset -5}${exec audtool --current-song-output-length}${color}
+
+$endif

@@ -1,0 +1,41 @@
+######################################
+#						   Font 								 #
+######################################
+use_xft yes
+
+######################################
+#						  Window							   #
+######################################
+update_interval 5
+own_window yes
+own_window_class Conky
+own_window_type normal
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+no_buffers yes
+draw_shades no
+#draw_borders yes
+
+######################################
+#						  Position						   #
+######################################
+minimum_size 700 700
+maximum_width 700
+gap_x 2530
+gap_y 190
+
+
+######################################
+#						  Color						   		 #
+######################################
+color1 EAEAEA
+#color2 BA1D26
+#color2 E0343E
+color2  DC5255
+
+TEXT
+${font Olympic Branding:size=180}${color2}${offset 73}${alignc}${time %A}${color1}
+${font Steelfish:size=59}${voffset -145}${offset 130}${alignc}${time %d of %B %Y}
+${font Steelfish:size=179}${color1}${voffset -47}${offset 130}${alignc}${time %l:%M}${font Steelfish:size=43}${time %p}

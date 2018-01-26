@@ -1,0 +1,9 @@
+feh --bg-fill /path/to/audi1.jpg --bg-fill /path/to/audi2.jpg
+compton -CGb
+cairo-dock -o -d /path/to/cairo-dock1 &
+cairo-dock -o -d /path/to/cairo-dock2 &
+sleep 5
+conky -q -c /path/to/ConkyDate &
+conky -q -c /path/to/ConkyDate &
+sleep 1
+tilda &
