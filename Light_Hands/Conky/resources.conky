@@ -1,0 +1,53 @@
+#background yes
+use_xft yes
+#xftfont DotMatrix:size=12
+#xftalpha .1
+update_interval 1.0
+#total_run_times 0
+own_window yes
+own_window_class Conky
+own_window_type normal
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+no_buffers yes
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+#stippled_borders 0
+#border_margin 4
+#border_width 0
+
+default_color 000000
+color1 000000
+color2 000000
+
+gap_y 50
+gap_x 830
+
+#override_utf8_locale yes
+#use_spacer yes
+minimum_size 300 300
+maximum_width 1000
+lua_load /home/pablo/Conkys/Manos/bars.lua
+lua_draw_hook_pre main_bars
+
+TEXT
+${color2}
+${font Bebas Neue:size=16}${alignc 0}${voffset -10}Arch Linux ${exec (uname -a | cut -d' ' -f3 | cut -d'-' -f1)}
+${font Bebas Neue:size=16}${offset 10}${voffset 0}CPU  1: ${voffset -2}${font Bebas Neue:size=12}${alignr 10}${exec sensors | grep 'Core 0' | awk '{print $3}' }
+${font Bebas Neue:size=16}${offset 10}${voffset 0}CPU  2: ${voffset -2}${font Bebas Neue:size=12}${alignr 10}${exec sensors | grep 'Core 0' | awk '{print $3}' }
+${font Bebas Neue:size=16}${offset 10}${voffset 0}CPU  3: ${voffset -2}${font Bebas Neue:size=12}${alignr 10}${exec sensors | grep 'Core 1' | awk '{print $3}' }
+${font Bebas Neue:size=16}${offset 10}${voffset 0}CPU  4: ${voffset -2}${font Bebas Neue:size=12}${alignr 10}${exec sensors | grep 'Core 1' | awk '{print $3}' }
+${font Bebas Neue:size=16}${offset 10}${voffset 0}CPU  5: ${voffset -2}${font Bebas Neue:size=12}${alignr 10}${exec sensors | grep 'Core 2' | awk '{print $3}' }
+${font Bebas Neue:size=16}${offset 10}${voffset 0}CPU  6: ${voffset -2}${font Bebas Neue:size=12}${alignr 10}${exec sensors | grep 'Core 2' | awk '{print $3}' }
+${font Bebas Neue:size=16}${offset 10}${voffset 0}CPU  7: ${voffset -2}${font Bebas Neue:size=12}${alignr 10}${exec sensors | grep 'Core 3' | awk '{print $3}' }
+${font Bebas Neue:size=16}${offset 10}${voffset 0}CPU  8: ${voffset -2}${font Bebas Neue:size=12}${alignr 10}${exec sensors | grep 'Core 3' | awk '{print $3}' }
+
+${offset 10}${voffset 0}${font Bebas Neue:size=12}NETWORK UP: ${alignr 5}${upspeed enp3s0}
+${offset 10}${voffset -10}${upspeedgraph enp3s0 40,280 3f75cc 416bad 100 -l}
+${offset 10}${voffset 0}${font Bebas Neue:size=12}NETWORK DOWN: ${alignr 5}${downspeed enp3s0}
+${offset 10}${voffset -10}${downspeedgraph enp3s0 40,280 3f75cc 416bad 100 -l}

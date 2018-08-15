@@ -37,8 +37,5 @@ What we'll need to do is to install all these software and replace the specified
       sleep 1
       tilda &
 
-You'll need to change the path for feh, caido-dock and conky(where you have each configuration file).feh will set the wallpaper on both screens(you need to edit the original image). Compton will allow transparency and other stuff, we're running it as a daemon. We start cairo and sleep a few seconds to launch conky properly. Finally we launch tilda, which configuration will tell to launch cava. We're all set!
-
-
 ## Troubleshooting
 If you are using pulseaudio, and you run cava but bars are not moving, althougt music is playing, it may be problem of your pulseaudio configuration. This could happen if you change your audio cable from one source to another. This happened to me and what I did to solve it was running pulseaudio volume control(in arch, pavucontrol)Then, in configuration, I had two output devices, the one I was using and other dummy output(Built-in Audio)The problem is that cava is getting sound from the dummy output instead of the actual output, so you only need to disable the dummy output.
