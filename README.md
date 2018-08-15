@@ -8,7 +8,7 @@ Although I'm working(and testing) this on ArchLinux, this should work for any di
 At a global scope, this is the software and tools that will be used:
 
 #### Compositioning and windows:
-- [Openbox](https://wiki.archlinux.org/index.php/openbox) - The window manager: When openbox is started(eg, when linux ends booting up), it will run file located at `~/.config/openbox/autostart`. If you set your commands here, they will be ran every time openbox starts.
+- [Openbox](https://wiki.archlinux.org/index.php/openbox) - The window manager: When openbox is started(eg, when linux ends booting up), it will run file located at `~/.config/openbox/autostart`. If you set your commands here, they will be run every time openbox starts.
 - [Compton](https://wiki.archlinux.org/index.php/Compton) - The compositor: Common way to run it is `compton -CGb`. You should place this on openbox autostart file mentioned above, and you allways will have compton running.
 
 #### Customization software
@@ -18,6 +18,8 @@ At a global scope, this is the software and tools that will be used:
 
 ## Other recomendations
 In my setups(openbox) I generally use [Arc-Dark](https://www.archlinux.org/packages/community/any/arc-gtk-theme) as `Gtk-Theme`, and my own [Arc-Dark-OSX](https://github.com/Dr-Noob/Arc-Dark-OSX) as `Window border`.
+
+You could download and prepare more than a theme and apply them dinamically with [autoconfigure](/autoconfigure.sh), which is a script to automatically switch between themes. The proper way to use it by running it from openbox autostart file and modifying it with proper paths.
 
 ## Some examples
 
