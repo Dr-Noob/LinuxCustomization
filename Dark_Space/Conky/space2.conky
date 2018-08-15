@@ -1,0 +1,68 @@
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+imlib_cache_size 0
+update_interval 2
+format_human_readable
+
+gap_x 2850
+gap_y -100
+minimum_size 600 800
+
+own_window yes
+own_window_type normal
+own_window_class Conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+#own_window_colour 333333
+own_window_colour 000000
+own_window_argb_visual no
+#draw_borders yes
+
+default_bar_size 100 6
+draw_shades no
+default_shade_color 000000
+default_outline_color 000000
+draw_graph_borders no
+
+override_utf8_locale yes
+use_xft yes
+xftfont ADELE:size=13
+xftalpha 1
+uppercase no
+max_text_width 40
+lua_load bars.lua
+lua_draw_hook_pre main_bars
+
+color1 FFFFFF
+color2 64876c
+color3 c64c2f
+
+TEXT
+${offset 20}${color1}${font ADELE:size=20}Top Processes by %CPU
+${font ADELE:size=15}
+${top name 1}${alignc 50}${top cpu 1}%
+${top name 2}${alignc 50}${top cpu 2}%
+${top name 3}${alignc 50}${top cpu 3}%
+${top name 4}${alignc 50}${top cpu 4}%
+#
+${voffset -145}${offset 340}${color1}${font ADELE:size=20}Top Processes by %RAM
+${font ADELE:size=15}
+${offset 330}${top_mem name 1}${alignc -275}${top mem 1}%
+${offset 330}${top_mem name 2}${alignc -275}${top mem 2}%
+${offset 330}${top_mem name 3}${alignc -275}${top mem 3}%
+${offset 330}${top_mem name 4}${alignc -275}${top mem 4}%
+#
+${voffset 34}
+Upload speed:${alignc 50}${upspeed enp3s0}
+Total uploaded:${alignc 50}${totalup enp3s0}
+${upspeedgraph enp3s0 40,295 8f181b c64c2f}
+#
+${voffset -110}${offset 330}Download speed:${alignc -275}${downspeed enp3s0}
+${offset 330}Total downloaded:${alignc -275}${totaldown enp3s0}
+${offset 330}${downspeedgraph enp3s0 40,295 8f181b c64c2f}
+#
+${voffset 120}
+${font Artilla Script:size=120}${color2}${alignc}${exec foo="$(date +%A)" && echo "${foo^}"}
+${font Luna:size=100}${color3}${voffset -20}${alignc}${time %l:%M}${font Steelfish:size=43}${time %p}
+${font Adele:size=30}${color2}${alignc -10}${voffset -30}${time %d of %B of %Y}

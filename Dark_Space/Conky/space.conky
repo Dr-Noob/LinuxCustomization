@@ -1,0 +1,59 @@
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+imlib_cache_size 0
+update_interval 1
+format_human_readable
+
+gap_x 1930
+gap_y 700
+minimum_size 600 300
+
+own_window yes
+own_window_type normal
+own_window_class Conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+#own_window_colour 333333
+own_window_colour 000000
+own_window_argb_visual no
+#draw_borders yes
+
+default_bar_size 100 6
+draw_shades no
+default_shade_color 000000
+draw_outline no
+default_outline_color 000000
+draw_graph_borders no
+show_graph_scale no
+show_graph_range no
+
+override_utf8_locale yes
+use_xft yes
+xftfont ADELE:size=13
+xftalpha 1
+uppercase no
+max_text_width 40
+
+color1 FFFFFF
+color2 FFFFFF
+
+TEXT
+#CPUs
+${color1}
+${voffset -5}${offset 5}CPU 1: ${cpu cpu1}% ${alignc 43}${exec sensors | grep 'Core 0' | awk '{print $3}' }
+${voffset -5}${offset 0}  ${cpugraph cpu1 50,300 8f181b c64c2f}
+${voffset -83}${offset 340}CPU 2: ${cpu cpu2}% ${alignr 0}${exec sensors | grep 'Core 1' | awk '{print $3}' }
+${voffset -5}${offset 340}${cpugraph cpu2 50,300 8f181b c64c2f}
+${voffset -5}${offset 5}CPU 3: ${cpu cpu3}% ${alignc 43}${exec sensors | grep 'Core 2' | awk '{print $3}' }
+${voffset -5}${offset 0}  ${cpugraph cpu1 50,300 8f181b c64c2f}
+${voffset -83}${offset 340}CPU 4: ${cpu cpu4}% ${alignr 0}${exec sensors | grep 'Core 3' | awk '{print $3}' }
+${voffset -5}${offset 340}${cpugraph cpu2 50,300 8f181b c64c2f}
+${voffset -5}${offset 5}CPU 5: ${cpu cpu5}% ${alignc 43}${exec sensors | grep 'Core 0' | awk '{print $3}' }
+${voffset -5}${offset 0}  ${cpugraph cpu5 50,300 8f181b c64c2f}
+${voffset -83}${offset 340}CPU 6: ${cpu cpu6}% ${alignr 0}${exec sensors | grep 'Core 1' | awk '{print $3}' }
+${voffset -5}${offset 340}${cpugraph cpu6 50,300 8f181b c64c2f}
+${voffset -5}${offset 5}CPU 7: ${cpu cpu7}% ${alignc 43}${exec sensors | grep 'Core 2' | awk '{print $3}' }
+${voffset -5}${offset 0}  ${cpugraph cpu7 50,300 8f181b c64c2f}
+${voffset -83}${offset 340}CPU 8: ${cpu cpu8}% ${alignr 0}${exec sensors | grep 'Core 3' | awk '{print $3}' }
+${voffset -5}${offset 340}${cpugraph cpu8 50,300 8f181b c64c2f}

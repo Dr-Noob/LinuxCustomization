@@ -25,3 +25,12 @@ You could download and prepare more than a theme and apply them dinamically with
 
 __Dark_Car__ theme
 ![example1](Dark_Car/preview.png)
+
+__Dark_Space__ theme
+![example1](Dark_Space/preview.gif)
+
+__Light_Hands__ theme
+![example1](Light_Hands/preview.png)
+
+__Light_Landscape__ theme
+![example1](Light_Landscape/preview.png)
