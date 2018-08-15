@@ -32,7 +32,7 @@ gap_x 830
 #use_spacer yes
 minimum_size 300 300
 maximum_width 1000
-lua_load /home/pablo/Conkys/Manos/bars.lua
+lua_load bars.lua
 lua_draw_hook_pre main_bars
 
 TEXT

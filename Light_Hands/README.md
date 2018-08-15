@@ -16,7 +16,7 @@ Install `Sardi` icon pack and replace the specified configuration files of each 
 
 * `CairoDock`: We'll have two docks; one at the very left of the screen, and other at the very right. If you need to set other path or you installed the icon pack but the icons are not working properly, you can modify the path under cairo dock configuration.
 
-* `Conky`: This will show the [date](Conky/date.conky), the [quote](Conky/quote.conky) and the [resources](Conky/resources.conky) information, which are in different files. __Note that the quote conky needs the quote script to work, so you need to modify it path, which is described in quote.conky.__
+* `Conky`: This will show the [date](Conky/date.conky), the [quote](Conky/quote.conky) and the [resources](Conky/resources.conky) information, which are in different files. __Note that the [quote.conky](Conky/quote.conky) needs the [quote script](quote.sh) to work, so you need to modify it path, which is described in [quote.conky](Conky/quote.conky). Note also that the resources conky needs the [bars.lua](Conky/bars.lua) script to work, so you need to modify it path, which is described in [bars.conky](Conky/bars.conky).__
 
 * `Mixing all together`: Finally, we need all stuff to start at boot, for what we could use my [autoconfigure](../autoconfigure.sh), or the openbox autostart file, mentioned above, which is a easier approach:
 
